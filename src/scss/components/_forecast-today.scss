@@ -1,0 +1,181 @@
+.forecast {
+  margin-bottom: 25px;
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 15px;
+    .container {
+      width: 1310px;
+    }
+  }
+}
+
+.forecast__today {
+  text-align: center;
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 36px;
+  padding-top: 30px;
+  border-radius: 35px;
+  box-shadow: $background-shadow;
+  background-color: rgba($background-blue-color, 0.6);
+  animation: onShowAnimation 500ms;
+
+  @media screen and (min-width: 768px) {
+    width: 490px;
+    padding-top: 40px;
+    padding-bottom: 55px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 53.2%;
+    top: 674px;
+    width: auto;
+    text-align: left;
+    border-radius: 0 35px 0 0;
+    padding: 0;
+  }
+}
+
+.forecast__today-disabled {
+  display: none;
+}
+
+.forecast__today-info-position {
+  @media screen and (min-width: 1280px) {
+    width: 490px;
+    margin-right: 0;
+    margin-left: auto;
+    padding-top: 55px;
+  }
+}
+
+.today__main-info {
+  @include letter-spacing(30);
+  font-size: 45px;
+  font-weight: 300;
+  margin-bottom: 14px;
+  line-height: 45px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 90px;
+    line-height: 90px;
+    margin-bottom: 10px;
+  }
+}
+
+.today__main-info span {
+  display: inline-block;
+}
+
+.today__main-info .suffix {
+  display: inline;
+  position: relative;
+  top: -22px;
+  font-size: 14px;
+  @include letter-spacing(30);
+  line-height: 14px;
+  margin-right: 14px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 23px;
+    line-height: 23px;
+    top: -48px;
+  }
+}
+
+.today__secondary-info {
+  @include letter-spacing(30);
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: inline-block;
+  }
+}
+
+.today__secondary-info span {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+
+  @media screen and (min-width: 1280px) {
+    width: auto;
+  }
+
+  &:first-child {
+    border-right: 1px solid rgba($primary-white-color, $light-opacity);
+    text-align: right;
+    padding-right: 8px;
+    @media screen and (min-width: 1280px) {
+      padding-right: 16px;
+    }
+  }
+
+  &:last-child {
+    text-align: left;
+  }
+}
+
+// Icon of sunset and sundown
+
+.today__dawn::before,
+.today__sunset::before {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 33px;
+  position: absolute;
+}
+
+.today__dawn::before {
+  right: 54px;
+  top: -10px;
+  background: url(./images/dawn.png);
+
+  @media screen and (min-width: 768px) {
+    right: 64px;
+  }
+  @media screen and (min-width: 1280px) {
+    right: 74px;
+  }
+}
+
+.today__sunset::before {
+  left: 10px;
+  top: -10px;
+  background: url(./images/sunset.png);
+}
+
+.today__month-and-time {
+  margin-bottom: 21px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 0;
+    width: 236px;
+    margin-right: 30px;
+  }
+}
+
+.today__time {
+  padding-left: 8px;
+
+  @media screen and (min-width: 1280px) {
+    padding-left: 16px;
+  }
+}
+
+.today__sunset {
+  padding-left: 42px;
+  @media screen and (min-width: 1280px) {
+    padding-left: 44px;
+  }
+}

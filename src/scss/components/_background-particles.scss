@@ -1,0 +1,12 @@
+.main-background {
+  position: relative;
+  min-height: 100vh;
+}
+
+.background-particles {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

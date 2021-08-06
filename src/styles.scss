@@ -1,0 +1,20 @@
+@import './scss/helpers/variables.scss';
+@import './scss/helpers/hidden.scss';
+@import './scss/helpers/mixins.scss';
+@import './scss/helpers/placeholders.scss';
+@import './scss/helpers/animation';
+@import './scss/normalize.scss';
+@import './scss/fonts.scss';
+@import './scss/base.scss';
+
+/* Components */
+@import './scss/components/search.scss';
+@import './scss/components/current-weather.scss';
+@import './scss/components/switch-buttons.scss';
+@import './scss/components/forecast-today.scss';
+@import './scss/components/forecast-five-days.scss';
+@import './scss/components/citation.scss';
+@import './scss/components/alarm-modal.scss';
+@import './scss/components/five-days-more-info.scss';
+@import './scss/components/chart.scss';
+@import './scss/components/background-particles.scss';

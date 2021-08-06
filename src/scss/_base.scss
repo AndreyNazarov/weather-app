@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $primary-font-family;
+  font-size: $primary-font-size;
+  line-height: $primary-line-height;
+  color: $primary-white-color;
+  overflow-x: hidden;
+  min-height: 100vh;
+  cursor: default;
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding: 0 80px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+    padding: 0 110px;
+  }
+}

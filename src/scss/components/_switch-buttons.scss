@@ -1,0 +1,42 @@
+.switch-days-btn {
+  margin-bottom: 32px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 90px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 76px;
+    text-align: right;
+  }
+}
+
+.switch-days-btn__set-day-btn {
+  @extend %link;
+  @include letter-spacing(30);
+  text-transform: uppercase;
+  font: 700 14px $primary-font-family;
+  color: $primary-black-color;
+  text-align: center;
+  background-color: rgba($primary-white-color, $half-opacity);
+  min-width: 126px;
+  border-radius: 29px;
+  line-height: 29px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 16px;
+    }
+  }
+
+  &--active {
+    background-color: $primary-white-color;
+  }
+}
+
+.not-active-buttons {
+  opacity: $half-opacity;
+}

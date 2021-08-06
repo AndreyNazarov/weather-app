@@ -1,0 +1,167 @@
+.five-days__more-information {
+  display: none;
+  width: 250px;
+  margin: 0 auto;
+  padding: 10px 0 19px 0;
+  position: relative;
+  overflow-x: hidden;
+
+  @media screen and (min-width: 768px) {
+    width: 510px;
+    padding: 34px 0 19px 0;
+  }
+  @media screen and (min-width: 1280px) {
+    margin: 0 auto;
+    width: 1040px;
+    height: 262px;
+    padding: 23px 0 0 0;
+  }
+}
+
+.five-days__more-information-enabled {
+  display: block;
+  animation: onShowAnimation 500ms;
+}
+
+.more-information__list,
+.weather-parameters__list {
+  list-style-type: none;
+}
+
+.more-information__list {
+  display: flex;
+  @include center-flex(hor);
+  width: fit-content;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1279px) {
+    justify-content: start;
+  }
+}
+
+.more-information__item {
+  min-width: 120px;
+  padding: 13px 0;
+  border: 1px solid rgba($primary-white-color, $half-opacity);
+  border-radius: 25px;
+  transition: $primary-transition;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background: rgba($primary-white-color, 0.1);
+    border: 1px solid transparent;
+  }
+}
+
+.more-information__time,
+.weather-parameters__list {
+  color: rgba($primary-white-color, $half-opacity);
+}
+
+.more-information__weather-icon {
+  margin: 0 auto;
+  height: 44px;
+}
+
+.more-information__time {
+  font: 400 12px/22px $primary-font-family;
+}
+
+.weather-parameters__list {
+  font: 400 14px/22px $primary-font-family;
+  padding: 13px 11px 5px;
+}
+
+.more-information__temperature {
+  font: 700 18px/22px $primary-font-family;
+  color: $primary-orange-color;
+}
+
+.weather-parameters__item {
+  display: flex;
+  @include center-flex(ver);
+  white-space: nowrap;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  &::before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: var(--bg-icon) no-repeat center/cover;
+    margin-right: 9px;
+  }
+}
+
+.item-pressure {
+  --bg-icon: url(./images/pressure.png);
+}
+
+.item-humidity {
+  --bg-icon: url(./images/humidity.png);
+}
+
+.item-wind {
+  --bg-icon: url(./images/wind.png);
+}
+
+.five-days__more-information-btn {
+  display: none;
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: block;
+  }
+}
+
+.five-days__more-information-btn--hidden {
+  display: none;
+}
+
+.more-information__next-btn,
+.more-information__prev-btn {
+  bottom: 156px;
+  position: absolute;
+  @extend %button;
+  background: rgba($small-buttons-color, $light-opacity);
+  border-radius: 50%;
+  .material-icons {
+    font-size: 20px;
+    color: $primary-white-color;
+    width: 27px;
+    line-height: 27px;
+  }
+}
+
+.more-information__prev-btn {
+  left: 12px;
+}
+
+.more-information__next-btn {
+  right: 12px;
+}
+
+ul.swiper-wrapper {
+  box-sizing: border-box;
+}
+
+div.swiper-scrollbar {
+  height: 2px;
+}
+
+div.five-days__more-information-btn--hidden {
+  display: none;
+}
+
+div.swiper-scrollbar-drag {
+  background: $primary-orange-color;
+}
+
+div.swiper-container-horizontal > .swiper-scrollbar {
+  height: 2px;
+}
+
+.five-days__more-information-scrollbar--hidden {
+  display: none;
+}
