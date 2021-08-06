@@ -1,2 +1,3 @@
 # Weather app
-by Fearless team :)
+
+by Nazarov
